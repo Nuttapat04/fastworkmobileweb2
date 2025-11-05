@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Character Select</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="mobile-container">
+
+        <header class="header">
+            <button type="button" class="back-button-container" onclick="history.back();">
+                <img src="img/back-button.png" alt="Back" class="back-arrow-img">
+            </button>
+            <h1 class="character-name">MARIO</h1>
+        </header>
+
+        <main class="character-select">
+            <div class="character-main">
+                <img src="img/mario.png" alt="Mario" class="character-portrait">
+                
+                <button class="play-button main-play">
+                    <img src="img/play-button-main.png" alt="Play Mario">
+                </button>
+            </div>
+        </main>
+
+        <nav class="character-carousel">
+            
+            <div class="character-option locked">
+                <img src="img/character-locked-1.png" alt="Locked Character" class="character-icon">
+                <img src="img/lock.png" alt="Locked" class="lock-icon">
+            </div>
+            
+            <div class="character-option active">
+                <img src="img/character-2.png" alt="Active Character" class="character-icon">
+                <button class="play-button small-play">
+                    <img src="img/play-button-small.png" alt="Play Character 2">
+                </button>
+            </div>
+
+            <div class="character-option locked">
+                <img src="img/character-locked-2.png" alt="Locked Character" class="character-icon">
+                <img src="img/lock.png" alt="Locked" class="lock-icon">
+            </div>
+
+        </nav>
+
+    </div>
+
+
+    <script>
+        document.querySelector('.back-button-container').addEventListener('click', function() {
+        window.location.href = 'home.html';
+        });
+    </script>
+</body>
+</html>

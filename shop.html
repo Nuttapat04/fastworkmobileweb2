@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Shop UI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="mobile-container shop-page">
+    <img src="img/bg-blue-bottom-wave.png" alt="Bottom Wave" class="shop-bottom-bg">
+    <header class="shop-hero">
+      <h1 class="shop-title">SHOP</h1>
+      <div class="gold-badge"><span>100 GOLD</span></div>
+    </header>
+
+    <main class="shop-list">
+
+      <article class="shop-item">
+        <div class="item-media">
+          <img src="img/character-locked-1.png" alt="ROV" />
+        </div>
+        <div class="item-body">
+          <div class="item-row">
+            <h3 class="item-name">ROV</h3>
+            <div class="item-price"><b>20</b> GOLD</div>
+          </div>
+          <button class="buy-pill">Buy</button>
+        </div>
+      </article>
+
+      <article class="shop-item">
+        <div class="item-media">
+          <img src="img/character-locked-2.png" alt="HAY DAY" />
+        </div>
+        <div class="item-body">
+          <div class="item-row">
+            <h3 class="item-name">HAY DAY</h3>
+            <div class="item-price"><b>50</b> GOLD</div>
+          </div>
+          <button class="buy-pill">Buy</button>
+        </div>
+      </article>
+
+      <article class="shop-item">
+        <div class="item-media media-bubble">
+          <img src="img/chatimg.png" alt="BOARD" />
+        </div>
+        <div class="item-body">
+          <div class="item-row">
+            <h3 class="item-name">BOARD</h3>
+            <div class="item-price"><b>10</b> GOLD</div>
+          </div>
+          <button class="buy-pill">Buy</button>
+        </div>
+      </article>
+
+      <article class="shop-item">
+        <div class="item-media">
+          <img src="img/placeholder.png" alt="TEXT" />
+        </div>
+        <div class="item-body">
+          <div class="item-row">
+            <h3 class="item-name">TEXT</h3>
+            <div class="item-price"><b>20</b> GOLD</div>
+          </div>
+          <button class="buy-pill">Buy</button>
+        </div>
+      </article>
+
+      <article class="shop-item">
+        <div class="item-media">
+          <img src="img/placeholder.png" alt="TEXT" />
+        </div>
+        <div class="item-body">
+          <div class="item-row">
+            <h3 class="item-name">TEXT</h3>
+            <div class="item-price"><b>20</b> GOLD</div>
+          </div>
+          <button class="buy-pill">Buy</button>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <div id="shopModal">
+    <div class="modal-box">
+      <p class="modal-msg">ข้อความ</p>
+      <button class="modal-close">OK</button>
+    </div>
+  </div>
+
+  <script src="shop.js"></script>
+</body>
+
+</html>

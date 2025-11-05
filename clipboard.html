@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Clipboard Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="mobile-container clipboard-page">
+
+        <img src="img/bg-waves.png" alt="Background Waves" class="bg-waves">
+
+        <header class="top-nav">
+            <div class="logo">
+                <img src="img/logo-m.png" alt="Logo">
+            </div>
+            
+            <button class="menu-btn" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="menu-overlay" id="menuOverlay">
+                <div class="menu-box">
+                    <h2>เมนูหลัก</h2>
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+
+        <button type="button" class="back-button-container" onclick="history.back();">
+            <img src="img/back-button.png" alt="Back" class="back-arrow-img">
+        </button>
+
+        <main class="content-area">
+            <div class="clipboard-container">
+
+                <img src="img/clipboard-complete.png" alt="Clipboard" class="clipboard-img">
+
+                <p class="note-text">text</p>
+
+            </div>
+        </main>
+
+        <footer class="bottom-bar">
+            <button type="button" class="footer-btn btn-close">
+                <img src="img/close-button.png" alt="Close">
+            </button>
+            <button type="button" class="footer-btn btn-like">
+                <img src="img/heart-button.png" alt="Like">
+            </button>
+        </footer>
+
+    </div>
+
+    <div class="popup-overlay" id="popup-x-container">
+        <img src="img/close-button.png" alt="X" class="popup-content">
+        <button class="popup-close-btn">Close</button>
+    </div>
+
+    <div class="popup-overlay" id="popup-heart-container">
+        <img src="img/heart-button.png" alt="Heart" class="popup-content">
+        <button class="popup-close-btn">Close</button>
+    </div>
+
+
+    <script src="clipboard.js" defer></script>
+
+    <script>
+        const menuBtn = document.getElementById('menuToggle');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = menuBtn.classList.toggle('open');
+            menuOverlay.classList.toggle('show');
+            document.body.classList.toggle('blurred', isOpen);
+        });
+
+        menuOverlay.addEventListener('click', (e) => {
+            if (e.target === menuOverlay) {
+                menuBtn.classList.remove('open');
+                menuOverlay.classList.remove('show');
+                document.body.classList.remove('blurred');
+            }
+        });
+
+    </script>
+
+
+</body>
+
+</html>

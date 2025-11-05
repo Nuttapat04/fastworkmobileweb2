@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Progress Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="mobile-container progress-page">
+
+        <img src="img/bg-blue-orange-wave.png" alt="Background" class="progress-bg-image">
+
+        <header class="top-nav">
+            <div class="logo">
+                <img src="img/logo-m.png" alt="Logo">
+            </div>
+        </header>
+
+        <button type="button" class="back-button-container" onclick="history.back();">
+            <img src="img/back-button.png" alt="Back" class="back-arrow-img">
+        </button>
+
+        <main class="progress-content">
+
+            <button type="button" class="day-button" id="dayButton" data-current="11" data-total="21">
+                <img src="img/day-button-red.png" alt="Day" class="day-button-bg">
+                <div class="day-text-overlay">
+                    <span class="day-text">DAY</span>
+                    <span class="day-fraction" id="dayFraction">11/21</span>
+                    <span class="day-percent" id="dayPercent">52.4% COMPLETED</span>
+                </div>
+
+            </button>
+
+            <div class="progress-area">
+                <button type="button" class="green-arrow-btn">
+                    <img src="img/green-arrow-up.png" alt="Up">
+                </button>
+
+                <div class="progress-bar-container">
+                    <div class="progress-bar-inner" id="progressBarInner"></div>
+                </div>
+                <p class="progress-label">Overall Progress</p>
+            </div>
+
+        </main>
+
+        <footer class="bottom-nav-wave">
+            <div class="nav-icons">
+                <div class="nav-circle blue-left"></div>
+                 <a href="calendar.html" class="nav-icon-calendar">
+      <img src="img/calendar-icon.png" alt="Calendar">
+    </a>
+                <div class="nav-circle blue-right"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="progress.js"></script>
+</body>
+
+</html>
