@@ -62,7 +62,7 @@ body {
     padding: 0;
     -webkit-appearance: none;
     appearance: none;
-    position: absolute;
+    position: fixed;
     z-index: 10000;
     top: 14vh;
     left: -2em;
@@ -269,6 +269,7 @@ body {
 }
 
 .clipboard-page .back-button-container {
+    position: fixed;
     top: 14vh;
     left: -4.2em;
     z-index: 10000;
@@ -560,6 +561,7 @@ body {
 
 body.blurred .back-button-container,
 body.blurred .bottom-bar {
+    position: fixed;
     filter: blur(6px);
     opacity: 0.5;
     pointer-events: none;
@@ -569,6 +571,7 @@ body.blurred .bottom-bar {
 
 body:not(.blurred) .back-button-container,
 body:not(.blurred) .bottom-bar {
+    position: fixed;
     filter: none;
     opacity: 1;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35));
@@ -586,6 +589,8 @@ body:not(.blurred) .bottom-bar {
     position: relative;
     overflow: hidden;
     background: #E89600;
+    -webkit-overflow-scrolling: touch; /* โมเมนตัมสกอลล์บน iOS */
+  overscroll-behavior-y: contain;    /* กันการสั่น/เด้ง */
 }
 
 .progress-bg-image {
@@ -611,18 +616,20 @@ body:not(.blurred) .bottom-bar {
 }
 
 .progress-page .back-button-container {
-    position: absolute;
+    position: fixed !important;
     top: 140px;
     left: -55px;
     background: none;
     border: none;
-    z-index: 1111;
-
+    z-index: 2147483647;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .progress-page .back-arrow-img {
     width: 180px;
     height: 180px;
+    display: block;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35));
     transition: filter 0.2s ease, transform 0.15s ease;
 }
@@ -1314,6 +1321,7 @@ body {
     }
 
     .back-button-container {
+        position: fixed;
         top: 7vh;
         left: -3em;
         width: 80px;
@@ -1394,6 +1402,7 @@ body {
     }
 
     .clipboard-page .back-button-container {
+        position: fixed;
         top: 9vh;
         left: -3.1em;
         height: 90px;
@@ -1411,6 +1420,7 @@ body {
     }
 
     .progress-page .back-button-container {
+        position: fixed;
         top: 65px;
     }
 
@@ -1571,6 +1581,7 @@ body {
     }
 
     .back-button-container {
+        position: fixed;
         top: 14vh;
         left: -4.25em;
         width: 100px;
