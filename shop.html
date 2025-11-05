@@ -12,9 +12,14 @@
 
 <body>
   <div class="mobile-container shop-page">
+    <button class="back-btn-shop" onclick="history.back()">
+      <img src="img/back-button.png" alt="Back">
+    </button>
+
     <img src="img/bg-blue-bottom-wave.png" alt="Bottom Wave" class="shop-bottom-bg">
     <header class="shop-hero">
-      <h1 class="shop-title">SHOP</h1>
+
+
       <div class="gold-badge"><span>100 GOLD</span></div>
     </header>
 
@@ -60,9 +65,7 @@
       </article>
 
       <article class="shop-item">
-        <div class="item-media">
-          <img src="img/placeholder.png" alt="TEXT" />
-        </div>
+        <div class="item-media placeholder"></div>
         <div class="item-body">
           <div class="item-row">
             <h3 class="item-name">TEXT</h3>
@@ -73,9 +76,7 @@
       </article>
 
       <article class="shop-item">
-        <div class="item-media">
-          <img src="img/placeholder.png" alt="TEXT" />
-        </div>
+        <div class="item-media placeholder"></div>
         <div class="item-body">
           <div class="item-row">
             <h3 class="item-name">TEXT</h3>
@@ -84,17 +85,15 @@
           <button class="buy-pill">Buy</button>
         </div>
       </article>
-    </main>
-  </div>
 
-  <div id="shopModal">
-    <div class="modal-box">
-      <p class="modal-msg">ข้อความ</p>
-      <button class="modal-close">OK</button>
-    </div>
-  </div>
+      <div id="shopModal">
+        <div class="modal-box">
+          <p class="modal-msg">ข้อความ</p>
+          <button class="modal-close">OK</button>
+        </div>
+      </div>
 
-  <script src="shop.js"></script>
+      <script src="shop.js"></script>
 </body>
 
 </html>
